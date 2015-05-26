@@ -1,0 +1,48 @@
+button,
+[type=submit],
+.button {
+	appearance: none;
+	border: none;
+	outline: none;
+	display: inline-block;
+
+	background-color: #72c8fa;
+	color: #ffffff;
+	border-radius: 3px;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: background-color 140ms ease-out;
+	width: auto;
+
+	&:hover,
+	&:focus {
+		background-color: darken(#72c8fa, 10%);
+	}
+
+	&.commit {
+		background-color: #7ad8a0;
+
+		&:hover,
+		&:focus {
+			background-color: darken(#7ad8a0, 10%);
+		}
+	}
+
+	&.cancel {
+		background-color: #c1c8cf;
+
+		&:hover,
+		&:focus {
+			background-color: darken(#c1c8cf, 10%);
+		}
+	}
+
+	&.destroy {
+		background-color: #f07575;
+
+		&:hover,
+		&:focus {
+			background-color: darken(#f07575, 10%);
+		}
+	}
+}

@@ -1,0 +1,32 @@
+<%= form_for @message do |f| %>
+	<fieldset>
+		<div class="field">
+			<%= f.label :author, 'Your Name' %>
+			<%= f.text_field :author %>
+
+			<% if @message.errors[:author].any? %>
+				<span class="help-text error"><%= @message.errors[:author][0] %></span>
+			<% end %>
+		</div>
+		<div class="field">
+			<%= f.label :email, 'Email' %>
+			<%= f.email_field :email %>
+
+			<% if @message.errors[:email].any? %>
+				<span class="help-text error"><%= @message.errors[:email][0] %></span>
+			<% end %>
+		</div>
+		<div class="field">
+			<%= f.label :content, 'What would you like to say to Jaime?' %>
+			<%= f.text_area :content %>
+
+			<% if @message.errors[:content].any? %>
+				<span class="help-text error"><%= @message.errors[:content][0] %></span>
+			<% end %>
+		</div>
+		<div class="field">
+			<%= link_to 'Cancel', root_path, class: 'button cancel' %>
+			<%= f.submit 'Submit', class: 'commit' %>
+		</div>
+	</fieldset>
+<% end %>

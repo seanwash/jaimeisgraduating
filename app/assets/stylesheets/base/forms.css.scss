@@ -1,0 +1,61 @@
+form {
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.field {
+		position: relative;
+
+		& + .field {
+			margin-top: 20px;
+		}
+	}
+
+	label,
+	input,
+	textarea { display: block; }
+
+	label {
+		margin-bottom: 10px;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		border: 2px solid #cad1d8;
+		border-radius: 3px;
+		outline: none;
+		padding: 10px;
+		transition: 140ms ease-out;
+
+		&:hover,
+		&:focus {
+			border-color: #88d2ff;
+		}
+	}
+
+	textarea {
+		min-height: 300px;
+		resize: vertical;
+	}
+
+	.field_with_errors {
+		label {
+			color: #f07575;
+		}
+
+		input,
+		textarea {
+			border-color: #f07575;
+		}
+	}
+
+	.help-text {
+		position: absolute;
+		top: 0px; right: 0;
+
+		&.error { color: #f07575; }
+	}
+}

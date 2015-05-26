@@ -1,0 +1,19 @@
+<header>
+	<h1>Messages <small><%= link_to 'Create a new message', new_message_path %></small></h1>
+</header>
+
+<ul class="message-list">
+	<% @messages.each do |message| %>
+		<li>
+			<p class="author">
+				<strong><%= message.author %></strong>, <%= message.created_at.strftime("%B %-d, %Y") %>
+
+				<% if message.owner == cookies.permanent[:jg_author] %>
+					<small><%= link_to 'Edit', edit_message_path(message) %></small>
+					<small><%= link_to 'Delete', message_path(message), method: :delete %></small>
+				<% end %>
+			</p>
+			<p><%= simple_format message.content %></p>
+		</li>
+	<% end %>
+</ul>
