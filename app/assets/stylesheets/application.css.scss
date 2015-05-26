@@ -14,9 +14,15 @@
  *= require_self
  */
 
- @import 'base/normalize';
- @import 'base/base';
- @import 'base/forms';
- @import 'base/buttons';
+$nprogress-color: #72c8fa;
+$nprogress-height: 10px;
+$nprogress-zindex: 10100;
 
- @import 'modules/message-list';
+@import 'nprogress';
+
+@import 'base/normalize';
+@import 'base/base';
+@import 'base/forms';
+@import 'base/buttons';
+
+@import 'modules/message-list';
