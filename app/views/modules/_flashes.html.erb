@@ -1,0 +1,18 @@
+<% if flash.present? %>
+	<div id="flash">
+		<% flash.each do |key, value| -%>
+			<%= javascript_tag do %>
+				new window.App.Base.Notification({
+					message: "<%=j value %>",
+					autoclose: true
+				});
+			<% end %>
+
+			<noscript>
+				<div class="flash-message flash-<%= key %>">
+					<span><%= value.html_safe %></span>
+				</div>
+			</noscript>
+		<% end -%>
+	</div>
+<% end %>

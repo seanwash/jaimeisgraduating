@@ -14,6 +14,12 @@ button,
 	transition: background-color 140ms ease-out;
 	width: auto;
 
+	& + button,
+	& + [type=submit],
+	& + .button {
+		margin-left: 10px;
+	}
+
 	&:hover,
 	&:focus {
 		background-color: darken(#72c8fa, 10%);

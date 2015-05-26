@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
     @message.owner = cookies.permanent[:jg_author]
 
     if @message.save
-      redirect_to :messages
+      redirect_to :messages, notice: 'Message has been added!'
     else
       render :edit
     end
@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
     @message = Message.find params[:id]
 
     if @message.update_attributes message_params
-      redirect_to :messages
+      redirect_to :messages, notice: 'Message has been updated!'
     else
       render :edit
     end

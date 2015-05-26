@@ -28,7 +28,7 @@ form {
 		border-radius: 3px;
 		outline: none;
 		padding: 10px;
-		transition: 140ms ease-out;
+		transition: border-color 140ms ease-out;
 
 		&:hover,
 		&:focus {
@@ -39,6 +39,22 @@ form {
 	textarea {
 		min-height: 300px;
 		resize: vertical;
+	}
+
+	.redactor-box {
+		border: 2px solid #cad1d8;
+		border-radius: 3px;
+		overflow: hidden;
+		transition: border-color 140ms ease-out;
+
+		&:hover,
+		&:focus {
+			border-color: #88d2ff;
+		}
+	}
+
+	.redactor-editor {
+		min-height: 300px;
 	}
 
 	.field_with_errors {
@@ -58,4 +74,8 @@ form {
 
 		&.error { color: #f07575; }
 	}
+}
+
+.actions {
+	text-align: right;
 }

@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
+//= require redactor-rails
 //= require_tree .

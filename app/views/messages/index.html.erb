@@ -4,16 +4,18 @@
 
 <ul class="message-list">
 	<% @messages.each do |message| %>
-		<li>
-			<p class="author">
-				<strong><%= message.author %></strong>, <%= message.created_at.strftime("%B %-d, %Y") %>
-
-				<% if message.owner == cookies.permanent[:jg_author] %>
-					<small><%= link_to 'Edit', edit_message_path(message) %></small>
-					<small><%= link_to 'Delete', message_path(message), method: :delete %></small>
-				<% end %>
-			</p>
+		<li class="card">
+			<div class="author">
+				<img src="<%= message.author_profile_image_url %>" alt="<%= message.author %>">
+				<p><strong><%= message.author %></strong>, <%= message.created_at.strftime("%B %-d, %Y") %></p>
+			</div>
 			<p><%= simple_format message.content %></p>
+			<% if message.owner == cookies.permanent[:jg_author] %>
+				<div class="actions">
+					<%= link_to 'Edit', edit_message_path(message), class: 'button' %>
+					<%= link_to 'Delete', message_path(message), method: :delete, class: 'button destroy' %>
+				</div>
+			<% end %>
 		</li>
 	<% end %>
 </ul>
