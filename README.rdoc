@@ -1,6 +1,3 @@
 == README
 
-== Todo
-* Author: name email
-* Message: content
-* Set a cookie once a user has posted so we can keep track of who the author was
+A simple guestbook like application for Jaime's graduation and the friends that couldn't be there
