@@ -20,4 +20,4 @@ window.init_redactor = function(){
 	}).addClass('redactified');
 };
 
-$(document).on( 'ready page:load', window.init_redactor );
+$(document).on( 'page:change', window.init_redactor );
