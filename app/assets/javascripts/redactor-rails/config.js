@@ -5,7 +5,7 @@ window.init_redactor = function(){
 	if (csrf_param !== undefined && csrf_token !== undefined) {
 		params = csrf_param + "=" + encodeURIComponent(csrf_token);
 	}
-	$('.redactor').redactor({
+	$('.redactor').not('.redactified').redactor({
 		// You can specify, which ones plugins you need.
 		// If you want to use plugins, you have add plugins to your
 		// application.js and application.css files and uncomment the line below:
@@ -17,7 +17,7 @@ window.init_redactor = function(){
 		"buttons": ['formatting', 'bold', 'italic', 'deleted', 'link'],
 		"path":"/assets/redactor-rails",
 		"css":"style.css"
-	});
+	}).addClass('redactified');
 };
 
 $(document).on( 'ready page:load', window.init_redactor );
