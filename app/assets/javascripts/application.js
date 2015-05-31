@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require redactor-rails
 //= require turbolinks
 //= require nprogress
 //= require nprogress-turbolinks
-//= require redactor-rails
 //= require_tree .
