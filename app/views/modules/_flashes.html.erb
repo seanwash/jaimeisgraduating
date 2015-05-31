@@ -2,7 +2,7 @@
 	<div id="flash">
 		<% flash.each do |key, value| -%>
 			<%= javascript_tag do %>
-				new window.App.Base.Notification({
+				new window.App.Notification({
 					message: "<%=j value %>",
 					autoclose: true
 				});

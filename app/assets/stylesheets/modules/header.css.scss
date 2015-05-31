@@ -42,4 +42,18 @@ header.main {
 		margin: 30px auto 0;
 		line-height: 1.4em;
 	}
+
+	.scroll-down {
+		position: absolute;
+		bottom: 40px; left: 50%;
+		margin-left: -20px;
+		z-index: 1;
+
+		animation-duration: 1.8s;
+		animation-delay: 2s;
+
+		svg {
+			cursor: pointer;
+		}
+	}
 }

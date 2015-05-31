@@ -68,4 +68,4 @@ class Notification
     $('#flash').off().remove()
 
 
-window.App.Base.Notification = Notification
+window.App.Notification = Notification
