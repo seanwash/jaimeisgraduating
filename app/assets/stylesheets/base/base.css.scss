@@ -2,20 +2,27 @@
 html { overflow-y: scroll; } /* always show scrollbar in non-IE */
 body, input, select, textarea, button { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 
+html,
+body {
+	height: 100%;
+}
+
 body {
 	background-color: #f0f3f6;
 	font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3 {
-	font-family: 'Libre Baskerville', serif;
 	font-weight: 400;
+
+	&.display { font-family: 'Pacifico', serif; }
 }
 
 hr {
 	border-top: 0;
 	border-bottom: 1px solid #c1c8cf;
 }
+
 .container {
 	max-width: 1280px;
 	margin: 40px auto 80px;

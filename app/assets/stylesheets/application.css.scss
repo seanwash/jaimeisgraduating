@@ -15,8 +15,8 @@
  *= require_self
  */
 
-$nprogress-color: #72c8fa;
-$nprogress-height: 10px;
+$nprogress-color: #758312;
+$nprogress-height: 2px;
 $nprogress-zindex: 10100;
 
 @import 'nprogress';
@@ -26,5 +26,6 @@ $nprogress-zindex: 10100;
 @import 'base/forms';
 @import 'base/buttons';
 
+@import 'modules/header';
 @import 'modules/message-list';
 @import 'modules/notifications';

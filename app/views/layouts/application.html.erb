@@ -5,7 +5,7 @@
 		<title>this is a thing</title>
 
 		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-		<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic|Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300italic,400,700' rel='stylesheet' type='text/css'>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 		<%= csrf_meta_tags %>
@@ -13,6 +13,10 @@
 	<body>
 
 		<%= render 'modules/flashes' %>
+
+		<% if current_page?(controller: 'messages', action: 'index') %>
+			<%= render 'modules/header' %>
+		<% end %>
 
 		<div class="container">
 			<%= yield %>
