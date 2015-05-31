@@ -41,19 +41,28 @@ form {
 		resize: vertical;
 	}
 
-	.redactor-box {
-		border: 2px solid #cad1d8;
-		border-radius: 3px;
+	.froala-wrapper + div {
+		display: none;
+	}
+
+	.froala-editor {
+		border: 2px solid #cad1d8 !important;
+		border-radius: 3px 3px 0 0;
+	}
+
+	.froala-wrapper {
+		border: 2px solid #cad1d8 !important;
+		border-radius: 0 0 3px 3px;
 		overflow: hidden;
 		transition: border-color 140ms ease-out;
 
 		&:hover,
 		&:focus {
-			border-color: #88d2ff;
+			border-color: #88d2ff !important;
 		}
 	}
 
-	.redactor-editor {
+	.froala-wrapper {
 		min-height: 300px;
 	}
 
@@ -64,8 +73,8 @@ form {
 
 		input,
 		textarea,
-		.redactor-box {
-			border-color: #f07575;
+		.froala-wrapper {
+			border-color: #f07575 !important;
 		}
 	}
 
