@@ -18,7 +18,7 @@
 		</div>
 		<div class="field">
 			<%= f.label :content, 'What would you like to say?' %>
-			<%= f.text_area :content, id: SecureRandom.uuid.split("-").first, class: 'redactor' %>
+			<%= f.text_area :content, class: 'redactor' %>
 
 			<% if @message.errors[:content].any? %>
 				<span class="help-text error"><%= @message.errors[:content][0] %></span>
